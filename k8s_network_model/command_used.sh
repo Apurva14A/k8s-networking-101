@@ -9,7 +9,7 @@ kubectl create -f single-container-pod.yml
 kubectl get pod
 kubectl describe pod <pod_name>
 
-# Check the node where the pods are running aneg get the IP address of the worker nodes to SSH
+# Check the node where the pods are running and get the IP address of the worker nodes to SSH
 kubectl get nodes -o yaml
 
 ssh <IP address of the worker node>
@@ -25,7 +25,7 @@ lsns -t pid
 # To check the Network namespaces these containers belongs to 
 ip netns identify <pid of the container>
 
-# You will get output which have network plugin prefix( something like - "cni-80h8f89d78dc09c0ff8")
+# You will get output which have network plugin prefix( something like - "cni-80h8f89d78dc09c0ff8" if CNI is the Network Plugin installed or it can be anyt NWT PlUGIN)
 
 # Now check the IP interface running in the nodes
 
