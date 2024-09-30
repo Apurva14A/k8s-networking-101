@@ -25,7 +25,7 @@ lsns -t pid
 # To check the Network namespaces these containers belongs to 
 ip netns identify <pid of the container>
 
-# You will get output which have network plugin prefix( something like - "cni-80h8f89d78dc09c0ff8" if CNI is the Network Plugin installed or it can be anyt NWT PlUGIN)
+# You will get output which have network plugin prefix( something like - "cni-80h8f-89d78d-09c0ff-8k4ks9f" if CNI is the Network Plugin installed or it can be anyt NWT PlUGIN)
 
 # Now check the IP interface running in the nodes
 
@@ -44,5 +44,9 @@ lsns -t pid
 for i in 2048 2068; do ip netns identify $i; done
 
 # The above command will list the network namespace id with network plugin prefix, if two container are running inside same pod then there namespace id aill be same.
+
+'cni-80h8f-89d78d-09c0ff-8k4ks9f'
+'cni-80h8f-89d78d-09c0ff-8k4ks9f'
+
 
 
